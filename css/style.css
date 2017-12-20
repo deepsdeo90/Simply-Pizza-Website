@@ -1,0 +1,1297 @@
+/*--=======================================COMMON CSS ==================================== */
+body{
+font-family: 'sharp_sans_semi',sans-serif;
+margin: 0;
+background-color: #E9E9E9;/* For browsers that do not support gradients */
+background: -webkit-linear-gradient(#E9E9E9, #FFFFFF);/* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(#E9E9E9, #FFFFFF); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(#E9E9E9,#FFFFFF);/* For Firefox 3.6 to 15 */
+background: linear-gradient(#E9E9E9, #FFFFFF); /* Standard syntax */
+}
+a{
+text-decoration: none;
+}
+a:hover{
+text-decoration: none;
+color: #E52A33;
+}
+/*--=======================================OUTER WRAPPER ==================================== */
+.wrapper {
+display: flex;  
+flex-flow: row wrap;
+}
+.wrapper > * {
+flex: 1 100%;
+}
+/*--=======================================HEADER==================================== */
+.header {
+border-bottom:2px solid #f8e080;
+background-color: #fff;
+box-shadow: 0px 0px 8px 1px #000000;
+}
+.top-header{
+display: flex;
+flex-direction: row;
+justify-content: space-between;/*the children flexbox items will be aligned to opposite sides with space between them*/
+width: 86%;
+margin: 0 7% 0 7%;
+}
+.top-header-left{
+order:1;
+padding:15px;
+}
+/*--=======================================MENU ==================================== */
+.menu-mobile,.dropdown-content-mobile{
+display: none;/*hide mobile menu*/
+}
+.menu{
+order:2;
+padding: 15px;
+margin: auto 0;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #FFFFFF;
+min-width: 215px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+margin-top: 15px;
+margin-left: 5px;
+border:1px solid  #e3e3e3 ;
+}
+.dropdown-content a {
+float: none;
+color: black;
+padding: 16px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+border-bottom: 1px solid  #e3e3e3 ;
+font-size: 17px;
+}
+.dropdown-content a:hover {
+background-color: #b2010d;
+color: #fff;
+}
+.menu:hover .dropdown-content {
+display: block;
+border:none;
+}
+.menu{
+font-size: 18px;
+color: #131313;
+font-weight: 600;
+line-height: 1.11;
+margin: auto 0; 
+}
+.menu a{
+color: black;
+text-decoration: none;
+font-weight: normal;
+}
+.first-menu{
+margin-right: 45px;
+margin-left: 20px;
+padding-bottom: 12px;
+}
+/*--=======================================HEADER STRIP==================================== */
+.header-strip{
+order:3;
+}
+.reward::after{
+content: " | ";
+}
+.header-strip{
+height: 45px;
+background-color: black;
+color: white;
+padding: 0 7%;
+margin: auto;
+line-height: 44px;
+}
+.header-left{
+float: left;
+padding: 0 15px;
+letter-spacing: .4px;
+font-size: 18px;
+font-weight: 600;
+}
+.header-left a{
+margin-left: 5px;
+color: #f8e080;
+font-size: 14px;
+font-weight: 600;
+text-decoration: none;
+text-transform: capitalize;
+}
+.header-right{
+float: right;
+padding: 0 15px;
+font-size: 14px;/*set font size for rewards and join*/
+}
+span.header-right > span:nth-child(1){
+font-weight:bold;/*make FOR as bold*/
+text-transform: uppercase;
+}
+span.header-right > span:nth-child(2){
+}
+span.header-right > span:nth-child(3){
+margin: 0 10px;
+}
+span.header-right a{
+color: #f8e080;/*make join word yellow*/
+}
+span.header-right > span:nth-child(4){
+  color: #f8e080;/*make join word yellow*/
+}
+.home-img-mobile{
+display: none;/*hide home middle img*/
+}
+/*--=======================================MIDDILE SECTION==================================== */
+.main {
+text-align: left;
+/*z-index: -1;*/
+margin-top: 12px;
+margin-top: 20px;
+}
+article{
+width: 86%;
+margin: 0 7% 0 7%; 
+}
+/*--=======================================HOME PAGE HEADER IMAGE==================================== */
+/*used jquery instead*/
+/*.home-img{
+margin-top:2% 
+}*/
+.home-img img{
+width: 100%;
+}
+/*--=======================================DEALS ==================================== */
+.deals-menu {
+margin-top: 15px;
+margin-bottom: 10px;
+/*-ms-box-orient: horizontal;
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -moz-flex;
+display: -webkit-flex;*/
+display: flex;
+/*-webkit-justify-content: space-around;*/ 
+justify-content: space-around;
+/*-webkit-flex-flow: row wrap;*/
+flex-flow: row wrap;
+/*-webkit-align-items: stretch;*/
+align-items: stretch;
+}
+.deals-menu h3  { flex: 1 100%; font-size: 23px; margin: 0 1.2%;vertical-align: middle;line-height: 21px;padding-top: 1%;}
+.deals-menu h3  a{float: right;font-size: 16px;color: #266dcc}
+.deals{
+padding:12px; /*for firefox*/
+display: flex;
+justify-content: space-between;
+}
+.deals div{
+flex-basis: 32%;
+text-align: center;
+border:1px solid  #e3e3e3 ;
+background-color: #fff;
+}
+.mobile_img{
+display: none;/*defualt mobile images are hidden*/
+}
+.deals div img{
+width: 100%;
+}
+.deals div h2 , .deals div p, .deals div button{
+text-align: left;
+margin-left: 20px;
+float: left;
+margin-right: 20px;
+margin-bottom: 6px;  
+margin-top: 7px;
+}
+.deals div h2 {
+font-size: 21px;
+}
+.deals div p{
+font-size: 17px;
+color: #131312;
+}
+.deals div button{
+margin-bottom: 3%;
+}
+.btn{
+border:1px solid #e52a33;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 22px;
+margin-right: 15px;
+font-size: 17px;
+font-weight: bold;
+
+}
+.btn-red{
+background-color: #e52a33;
+border-color: #e52a34;
+color: #ffffff;
+}
+/*--=======================================MENU==================================== */
+.menu-middle{
+padding:12px; 
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+z-index: -1;
+}
+.img-holder{
+position: relative;
+margin-bottom: 20px;
+}
+.img-holder a {
+position: absolute;
+left: 10px;
+top: 10px;
+color: #fff;
+transition:color 0.3s linear;
+/*-webkit-transition: color 0.3s linear;
+-moz-transition: color 0.3s linear;*/
+}
+.img-holder a:hover{
+color: #e52a33;
+font-weight: bold;
+}
+.mobile-Portrait{
+display: none;/*hide mobile images*/
+}
+/*--=======================================REWARDS==================================== */
+.rewards{
+background-color: black;
+text-align: center;
+padding: 50px 0;
+border-bottom: 5px solid #E52A33;
+}
+/*--=======================================FOOTER SECTION==================================== */
+footer{
+width: 86%;
+margin: 0 7% 0 7%;
+padding: 50px 0 0 10px; 
+}
+.footer-menu{
+display: flex;
+justify-content: space-around;
+flex-flow: row wrap;
+align-items: stretch;
+/*-webkit-flex-flow: row wrap;
+-webkit-align-items: stretch;
+-webkit-flex-flow: row wrap;
+-webkit-justify-content: space-around;
+*/
+}
+footer > div.footer-menu > div:nth-child(2),footer > div.footer-menu > div:nth-child(3),footer > div.footer-menu > div:nth-child(4){
+flex:1;
+}
+.footer-menu h6{
+color: #131313;
+letter-spacing: -1.5px;
+font-size: 17px;
+font-weight:bold;
+text-transform: uppercase;
+margin-bottom: 5px;
+margin-top:0px;
+}
+.footer-menu a{
+display: block;
+font-size: 13px;
+color: #131313;
+text-transform: capitalize;
+line-height: 1.75;
+margin-bottom: 5px;
+}
+.footer-menu a:hover{
+text-decoration: none;
+color: #b2010d;
+}
+.footer-bottom{
+border-top: 2px solid #CFCECC;
+border-bottom: 2px solid #CFCECC;
+margin: 25px 0;
+height: 32px;
+padding: 12px 15px;
+}
+.footer-bottom a{
+font-size: 13px;
+color: #131313;
+text-transform: capitalize;
+line-height: 1.75;
+}
+.footer-bottom a:hover{
+text-decoration: none;
+color: #b2010d;
+}
+/*privacy policy*/
+.footer-bottom >a:nth-child(1){
+float: left;
+margin-right: 10px;
+line-height: 32px;
+}
+.footer-bottom >a:nth-child(1):after,.footer-bottom >a:nth-child(2):after{
+content: " | ";
+margin-left: 10px;
+}
+/*terms of service*/
+.footer-bottom >a:nth-child(2){
+float: left;
+margin-right: 10px;
+line-height: 32px;
+}
+/*sitemap*/
+.footer-bottom >a:nth-child(3){
+float: left;
+line-height: 32px;
+}
+/*facebook*//*twitter*//*youtube*/ 
+.footer-bottom >a:nth-child(4),.footer-bottom >a:nth-child(5),.footer-bottom >a:nth-child(6){
+float: right;
+text-align: right;    font-size: 34px;
+margin: auto 0px;
+line-height: 33px;
+color: #E52A33;
+margin-right: 10px;
+}
+.footer-img{
+  background: url(../img/footer.logo.jpg.png) no-repeat scroll 0 0 rgba(0,0,0,0);
+  width: 100px;
+  height: 93px;  
+  flex:2;
+}
+
+/*=======================Menu Pizza page =========================*/
+.menu-large-header{
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-left: 2%;
+  margin-bottom: 3%;
+  margin-top: 2%;
+}
+.submenu-header{
+    border-top: 2px solid #CFCECC;
+    border-bottom: 2px solid #CFCECC;
+    margin: 5px 0;
+    height: 32px;
+    padding: 12px 15px;
+    display: flex;
+}
+.pizza-submenu{
+ color: #131313;
+ font-size: 18px;
+ flex: 1;
+ text-align: center;
+line-height: 32px;
+}
+.pizza-submenu:hover{
+text-decoration: underline;
+color: #131313;
+}
+.pizza-submenu-active{
+  text-decoration: underline;
+}
+/*=======================SUBMENU ===========================*/
+.submenu-item{
+padding:1%; 
+display: flex;
+flex-flow: wrap;
+}
+.submenu-item-col-1{
+border: 1px solid #cfcecc;
+background-color: #fff;
+padding: 20px;
+flex-basis: 44%;
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+height: 100%;
+margin: 10px;
+flex-grow: 1;
+min-height: 204px;
+}
+.submenu-item-row{
+  display:flex;
+  align-content: center;
+}
+.submenu-item .right{
+  text-align: center;
+}
+.submenu-item div h2 {
+font-size: 20px;
+text-align: left;
+float: left;
+width: 100%;
+margin:0;
+text-transform: capitalize;
+}
+.submenu-item div p{
+text-align: left;
+float: left;
+font-size: 17px;
+color: #131312;
+margin: 15px 0;
+width: 100%;
+}
+.submenu-item div button{
+  width: 50%;
+}
+.submenu-item img{
+max-width: 175px;
+max-height: 200px;
+}
+.left p{
+  min-height: 62px;
+}
+.signin-header{
+  text-transform: capitalize;
+  margin-bottom: 1%;
+}
+/*=============================create form ===============*/
+.create-form-row{
+flex-flow: column;
+}
+.form-row{
+margin: 10px;
+}
+#sign-in{
+margin: 10px;
+width: 96%;
+padding: 4px 20px;  
+} 
+.split{
+text-align: center;
+}
+.split a{
+color: #266dcc;
+}
+.split a:first-child:after{
+content: " | ";
+margin-left: 10px;
+margin-right: 10px;
+}
+.grey-bk{
+background-color: #F1F1F1;
+border: 5px solid #ffffff;
+background: radial-gradient(ellipse at center, #f1f1f1 50%, #e0dfde 92%, #cfcecc 100%); /* Standard syntax */
+}
+ol.sign-in-info {
+counter-reset:item; 
+margin:0; 
+padding-left:0; 
+}
+ol.sign-in-info>li {
+counter-increment:item; 
+list-style:none inside; 
+margin: 20px 0;
+overflow: hidden;
+font-size: 16px !important;
+line-height: 1.3;
+}
+ol.sign-in-info>li:before {
+content:counter(item) ;
+margin-right: 20px;
+padding: 8px;
+display: block;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+width: 29px;
+background: #131313;
+color: #FFF;
+text-align: center; 
+font-weight: 100;
+float: left;
+}
+
+.create-form{
+flex:2;
+}
+.creat-form-info{
+flex:1;
+}
+/*======================join page================*/
+.middle-header{
+text-align: left;
+text-transform: capitalize;
+margin-bottom: 0;
+margin-top: 0;
+font-size: 27px;
+}
+.account-item{
+padding:10px;
+margin: 10px; 
+display: flex;
+flex-flow: wrap;
+flex-direction: row;
+border: 1px solid #cfcecc;
+background-color: #fff;
+
+}
+.account-item-row{
+text-align: center;
+width: 100%;
+}
+.account-item-row h1{
+text-transform: uppercase;
+margin: 20px 0;
+font-size: 20px;
+}
+.account-item-row p{
+font-size: 17px;
+}
+.account-item-row{
+border-bottom: 3px solid #ED1C24;
+margin: 10px 0;
+}
+.account-item-row:nth-child(2){
+text-align: left;
+display: flex;
+}
+.account-item-row:nth-child(3){
+border:none;
+}
+.account-item-col{
+flex:1;
+}
+#create-account   input[type=text], input[type=email], input[type=password], select, textarea{
+padding: 9px 12px;
+border: 1px solid #ccc;
+border-radius: 20px;
+box-sizing: border-box;
+margin: 10px 10px 10px  0;
+}
+
+#firstname ,#lastname, #month,#year,#zipcode{
+width: 47%;
+}
+#email{
+width: 97%;
+}
+#phoneno{
+width: 70%;
+}
+#ext{
+width: 25%
+}
+.exclusive-offers-icon{
+background: url(../img/chat.png) no-repeat scroll 0 0 rgba(0,0,0,0);
+/*position: relative;*/
+display: inline-block;
+width: 55px;
+height: 33px;
+z-index: inherit;
+}
+#exclusive-offers{
+display: flex;
+}
+.signupnote{
+font-size: 13px;
+margin-top: 7px;
+margin-bottom: 7px;
+}
+.offerlabel{
+font-size: 20px;
+
+}
+/*make offers radio button in separate line*/
+#offer-option span{
+display: block;
+padding: 10px 0;
+}
+
+#sign-up{
+margin: 10px 10px 10px 0;
+width: 60%;
+padding: 4px 20px;
+}
+#terms{
+text-align: justify;
+} 
+.require::after {
+content: "* ";
+color: red;
+font-size: 13px;
+}
+/*================================FAQs=====================*/
+.faq a{
+color: #266dcc;
+}
+.faq-item{
+padding:10px;
+margin: 10px; 
+display: flex;
+flex-flow: wrap;
+flex-direction: row;
+border: 1px solid #cfcecc;
+background-color: #fff;
+
+}
+.faq-item-row{
+text-align: left;
+width: 100%;
+border-bottom: 3px solid #ED1C24;
+margin: 10px 0;
+}
+/*remove border for last faq*/
+.faq-item > div:last-child{
+border-bottom: none;
+}
+.faq div{
+margin: 20px 0;
+font-size: 20px;
+}
+.faq-item-row p{
+font-size: 17px;
+}
+.aboutus{
+border-bottom: 1px solid #CFCECC;
+}
+.aboutus div{
+font-weight: bold;
+}
+.about-us-img-outer{
+  display: flex;
+  flex-direction:row;
+}
+.about-us-img-outer div{
+  border:2px solid #ED1C24;
+}
+.outer-card{
+  display: flex;
+  margin-top: 20px;
+}
+.card {
+text-align: center;
+flex: 1;
+margin: 20px;
+height: 100%;
+padding: 10px;
+}
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card img {
+border-radius: 50%;
+width: 75%;
+height: 75%;
+}
+.container {
+padding: 2px 16px;
+}
+/*===========================contact us ======================*/
+textarea{
+  width: 100%;
+  height: 155px; 
+}
+/*========================privacy policy & terms of conditions======= */
+.outer{
+  display: flex;
+}
+.outer h5{
+  font-size: 14px;
+}
+.inner-left{
+border: 1px solid #cfcecc;
+background-color: #fff;
+padding: 10px;
+margin: 23px 12px 23px 10px;
+flex:2;
+}
+.inner-right{
+ border: 1px solid #cfcecc;
+background-color: #fff;
+padding: 10px;
+margin: 23px 23px 23px 12px;
+height: 100%;
+min-height: 270px;
+text-align: center;
+flex:1;
+}
+.inner-right h6,.inner-right p{
+font-size: 16px;
+margin: 20px 6px;
+} 
+.border{
+border-top:1px solid #CFCECC;
+padding-top: 20px;
+}
+.links{
+
+display: block;
+}
+.privacy-policy a{
+color: #266dcc;
+text-decoration: none;
+cursor: pointer;
+font-size: 14px;
+font-weight: normal;
+line-height: 20px;
+}
+.links:before,.top:after{
+content: "»";
+font-size:18px;
+color: #717171;
+margin-left: 2px;
+margin-right: 2px;
+}
+
+.inner-left .faq-item-row {
+padding-bottom: 15px;
+}
+.privacy-policy p{
+font-size: 14px;
+
+}
+.inner-left > div:last-child{
+border:none;
+}
+.dummy-element{
+border:none;background:none;
+height: 0;
+min-height: 0;
+margin-top: 0 !important;
+margin-bottom: 0 !important;
+padding-top: 0 !important;
+padding-bottom: 0 !important;
+}
+.black-border{
+border:3px solid #111;
+}
+/*======================testimonial======================*/
+#block{
+  display:flex;
+  padding:0px 6px 0 6px;
+  margin:0 auto;
+}
+#block > div{
+  flex:1;
+}
+.rewards h3{
+  z-index:-1;
+  color:#939393;
+  font-size:13px;
+  font-weight:normal;
+  text-align:center;
+  text-transform:uppercase;
+  margin-bottom:17px;
+}
+#block p.content{
+  font-style:italic;
+  line-height:24px;
+  padding-left:19px;
+  margin:0 40px;
+  position:relative;
+  overflow:hidden;
+  color: #939393;
+}
+#block p.content span.laquo{
+  background:url(../img/laquo.png) no-repeat;
+  width:14px;
+  height:11px;
+  position:absolute;
+  left:0;
+  top:4px;
+  display:block;
+}
+#block p.content span.raquo{
+  background:url(../img/raquo.png) no-repeat right 4px;
+  width:13px;
+  height:15px;
+  padding-left:4px;
+  display:inline-block;
+}
+#block .sign{
+  text-align:right;
+  float:right;
+}
+#block .sign a{
+  color:#939393;
+  font-family:Arial,sans-serif;
+  font-size:13px;
+  text-decoration:none;
+}
+#block .sign a:hover{
+  text-decoration:underline;
+}
+#block .sign p{
+  color:#939393;
+  font-size:12px;
+  line-height:15px;
+  margin-top:6px;
+}
+.video{
+  width:100%;
+  height:100%;
+}
+ /*==========  Non-Mobile First Method  ==========*/
+ @media only screen and (max-width : 1280px)  {
+  .img-holder{
+    width: 30%;
+  }
+  .img-holder img{
+    width:100%;
+  }
+  .img-holder{
+    margin-bottom: 40px;
+  }
+  .submenu-item-col-1{
+    flex-basis: 43%;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    .img-holder img{
+      width: 100%;
+    }
+    .img-holder{
+      margin-bottom:35px;
+    }
+    .rewards img {
+      width: 35%;
+    }
+    .submenu-item-col-1{
+     flex-basis: 42%;
+    }
+    /*adjust margins for sign up page*/
+    #create-account input[type="text"], input[type="email"], input[type="password"], select, textarea{
+      margin: 2px;
+    }
+}
+  /* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .deals-menu h3{
+    font-size: 22px;
+  }
+  .deals div h2{
+    font-size: 17px;
+  }
+  .deals div p{
+    font-size: 15px;
+  }
+  .deals .btn{
+    padding: 6px 12px;
+  }
+  .img-holder{
+    margin-bottom:0px;
+    width: 33%;
+  }
+  .rewards img {
+      width: 45%;
+  }
+  .footer-menu h6{
+    font-size: 15px;
+  }
+  /*menu page */
+  .submenu-item-row{
+    flex-direction: column;
+  }
+  .submenu-item-col-1{
+  flex-basis: 40%;
+  }
+  .submenu-item div button{
+    width: 100%;
+  }
+  /*==============sign up page======*/
+  #sign-up{
+    width: 80%;
+  }
+  .exclusive-offers-icon{
+    width: 80px;
+  }
+  /*=============Footer========*/
+  .footer-img{
+    flex:1;
+    padding-right: 185px;
+    margin-right: 20px;
+  }
+  footer > div.footer-menu > div:nth-child(2), footer > div.footer-menu > div:nth-child(3), footer > div.footer-menu > div:nth-child(4){
+    flex:2;
+  }
+  .address{
+    font-size: 15px;
+  }
+}
+  /* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    /*Samsung Galaxy S6 - Landscape (360x640)*/
+    /*--=======================================HEADER==================================== */
+    /*make header fixed*/
+    .header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;/*avoid overlapping*/
+    }
+    .main{
+      margin-top: 0;
+    }
+    /*shrink top logo little bit*/
+    .top-header-left img{
+    width: 75%;
+    }
+    /* decreas padding around logo*/
+    .top-header{
+    margin:0;
+    width: 100%;
+
+    }
+    .top-header-left{
+    padding: 10px;
+    margin-left: 2%;
+    }
+    /*--=======================================MENU==================================== */
+    /*hide menu bar */
+    .menu{
+    display: none;
+    }
+    .menu-mobile{
+    order:2;
+    padding: 15px;
+    margin: auto 0;
+    display: block;
+    }
+    .icon{
+    font-size: 29px;color: #111;
+    }
+   /*menu mobile*/
+    .dropdown-content-mobile {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 11%;
+    margin-left: 0;
+    border-top:1px solid  #e3e3e3 ;
+    width: 100%;
+    }
+
+    .dropdown-content-mobile a {
+    float: none;
+    color: black;
+    padding: 7px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid  #e3e3e3 ;
+    font-size: 17px;
+    text-transform: uppercase;
+    }
+    /*for submenu*/
+    .dropdown-content-mobile div a{
+
+    padding-left: 50px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 14px;
+
+    }
+
+    .dropdown-content-mobile a:hover {
+    background-color: #b2010d;
+    color: #fff;
+
+    }
+    .header-strip{
+    padding:0;
+    }
+    /*remove sign in from header strip ,it is added to menu*/
+    .header-left a{
+    display: none;
+    }
+    /*decrease  font size*/ 
+    .header-left{
+    letter-spacing: 0.3px;
+    font-size: 15px;
+    }
+    .header-right{
+    font-size: 13px;
+    }
+    /*--=======================================MIDDLE BODY==================================== */
+    /*remove side margin for body*/
+    article{
+    margin: 0;
+    }
+    /*--=======================================DEALS==================================== */
+    /*change font size for deals*/
+    .deals-menu h3{
+    margin: 0 2%;
+    font-size: 21px;
+    }
+    .deals-menu h3  a{
+    font-size: 15px;
+    }
+    .deals{
+    justify-content:center;
+    }
+    .deals div button{
+    margin:5px 10px 10px 10px;
+    }
+    .deals div h2, .deals div p{
+    margin: 5px 10px 0 10px;
+    }
+    .deals div h2{
+    font-size: 14px;
+    min-height: 30px;
+    }
+    .deals div p{
+    font-size: 13px;
+    min-height: 35px;
+    }
+    .btn{
+    font-size: 14px;
+    padding: 6px 9px;
+    }
+    /*increase image height */
+    .mobile_img
+    {
+    display: inline-block;
+    height: 47%;
+    }
+    /*hide desktop image*/
+    div.deals > div > img:nth-child(1){
+    display: none;
+    }
+    /*--=======================================MENU==================================== */
+    .img-holder{
+    margin-bottom: 2%;
+    }
+    .img-holder a{
+    font-size: 18px;
+    }
+    /*decarese margin after menu*/
+    .deals-menu {
+    margin-bottom: 5px;
+    }
+    .menu-middle{
+    padding:2%;
+    }
+    /*--=======================================REWARD ==================================== */
+    /*drease padding around reward images*/
+    .rewards{
+    padding: 15px 0;
+    }
+    .submenu-item-col-1{
+    flex-basis: 38%;
+
+  }
+  .footer-img{
+    display: none;
+  }
+  /*=======================faq======================*/
+  .faq div{
+  margin: 15px 0;
+  font-size: 18px;
+  }
+  .faq-item-row p{
+  font-size: 15px;
+  }
+/*====================privacy policy ====================*/
+  .outer{
+  flex-direction: column;
+  }
+  .inner-left,.inner-right{
+  margin:15px;
+  }
+}
+/*iphone 5 potrate*/
+@media only screen and (max-width : 640px) {
+  .account-item-row:nth-child(2){
+    flex-direction: column;
+  }
+  #sign-up{
+    width: 97%;
+  }
+  #firstname, #lastname, #month, #year, #zipcode{
+    width: 48%;
+  }
+   /*--=======================================FOOTER==================================== */
+    /*change css for  footer*/
+    footer{
+    width: 96%;
+    margin: 0% 2% 0% 2%;
+    padding: 0 0 0 10px
+    }
+
+    .footer-bottom{
+    padding:2px 1px;
+    margin: 5px 0 15px 0;
+    }
+    /*changefooter menu to colmn*/
+    .footer-menu{
+    flex-flow: column;
+    }
+   .footer-menu h6{
+    padding: 10px 0 10px 0;
+    font-size: 15px;
+    border-bottom: 1px solid #CFCECC;
+    margin: 0;
+    line-height: 14px;
+    cursor: pointer;
+    }
+    .footer-menu h6:after{
+    content: " > ";
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 18px;
+    vertical-align: middle;
+    }
+    .footer-menu >div:last-child>h6{
+    border:none;
+    }
+    div.footer-menu > div > div.panel {
+    display: none;
+    }
+  
+}
+/*iphone 5 landscape*/
+ @media only screen and (max-width : 568px) {
+  .deals div button{
+    margin: 5px 10px 25px 10px;
+  }
+  
+  .submenu-item{
+    flex-direction: column;
+  }
+  .pizza-submenu{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .submenu-item-col-1{
+    flex-basis: 39%;
+  }
+  .outer-card{
+   flex-direction: column;
+   text-align: center;
+    }
+    .card{
+      margin: 10px;
+    }
+  .card img {
+    width: 50%;
+    height: 70%;
+    }
+
+}
+/* Extra Small Devices, Phones */ /*Samsung Galaxy S6 - Portrait (640x360)*/
+@media only screen and (max-width : 480px) {
+    /*adjust welcome message */
+    .header-left span{
+      display: none;
+    }
+    .header-strip{
+          line-height: 40px;
+          height: 40px;
+    }
+    .deals-menu h3{
+      font-size: 19px;
+    }
+    .deals{
+      flex-direction: column;
+    }
+    .deals div img{
+      height: 130px;
+    }
+    .deals div h2{
+          font-size: 16px;
+      min-height: 20px;
+    }
+    .deals div p{
+      font-size: 15px;
+      min-height: 25px;  
+      width: 94%;
+    }
+    .dropdown-content-mobile{
+      margin-top: 20%;
+    }
+  .img-holder a{
+  font-size: 15px;
+  }
+  .mobile-Portrait{
+  display: inline-block;
+  }
+  .img-holder{
+  width:49%;
+  }
+  .rewards img{
+  width: 90%;
+  }
+  .pizza-submenu{
+    line-height: 16px;
+  }
+  #block{
+    flex-direction: column;
+  }
+/*==========================about us===============*/
+.about-us-img-outer{
+flex-direction: column;
+}
+.about-us-img-outer div{
+  flex:1 30%;
+}
+}
+@media only screen and (max-width: 414px)
+{
+  .footer-bottom >a:nth-child(4), .footer-bottom >a:nth-child(5), .footer-bottom >a:nth-child(6){
+  display: block;
+  width: 30%;
+  float: left;
+  text-align: left;
+  margin-top: 10px;
+  margin-right: 10px;
+ }
+ /*sign up page*/
+ .middle-header{
+  font-size: 22px;
+  margin-top: 10px;
+ }
+  #firstname, #lastname, #month, #year, #zipcode{
+  width: 47%;
+ }
+ .exclusive-offers-icon{
+  width: 85px;
+
+ }
+ .account-item-row h1{
+  font-size: 18px;
+  margin: 10px 0;
+ }
+}
+@media only screen and (max-width : 384px) {
+  .footer-bottom >a:nth-child(4), .footer-bottom >a:nth-child(5), .footer-bottom >a:nth-child(6){
+  width: 26%;
+  }
+}
+@media only screen and (max-width : 360px) {
+  .footer-bottom >a:nth-child(4), .footer-bottom >a:nth-child(5), .footer-bottom >a:nth-child(6){
+  width: 16%;
+  }
+}
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+  .img-holder{
+  width:100%;
+  }
+  .signupnote,.exclusive-offers-icon{
+    display: none;
+  }
+  #firstname, #lastname, #month, #year, #zipcode,#phoneno{
+    width: 100%;
+  }
+  #offer-option span{
+    padding: 5px 0 ;
+  }
+  #offer-option label{
+    font-size: 15px;
+  }
+}
+
